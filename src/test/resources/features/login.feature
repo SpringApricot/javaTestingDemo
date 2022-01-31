@@ -1,10 +1,8 @@
-@login
 Feature: Login
   As Sebastian, a security-conscious user
   I want to access the secure area
   So I can do my business there.
 
-  @smoke
   Scenario: Login successfully
     Given Sebastian opens the "Login" page
     When he fills the "username" field with "tomsmith"

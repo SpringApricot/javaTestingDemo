@@ -1,12 +1,10 @@
 package com.example.seleniumdemo.hooks;
 
 import com.example.seleniumdemo.SpringContextConfiguration;
+import com.example.seleniumdemo.config.SeleniumDemoProperties;
 import io.cucumber.java.*;
 import io.cucumber.spring.CucumberContextConfiguration;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -16,11 +14,11 @@ public class generalHooks {
 
     @Autowired
     private WebDriver driver;
+    @Autowired
+    private SeleniumDemoProperties properties;
 
     @Before
-    public void openBrowser() {
-        driver.get("https://soraia.herokuapp.com");
-    }
+    public void openBrowser() { driver.get(properties.getHost()); }
 
     @After
     public void closeBrowser() {
