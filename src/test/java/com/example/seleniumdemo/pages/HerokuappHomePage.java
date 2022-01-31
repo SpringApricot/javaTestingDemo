@@ -8,16 +8,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("cucumber-glue")
-public class SecurePage {
+public class HerokuappHomePage {
 
-    @FindBy(id = "flash")
-    WebElement messageDiv;
+    @FindBy(linkText="Form Authentication")
+    WebElement formAuthentication;
 
-    public SecurePage(WebDriver driver) {
+    public HerokuappHomePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
-    public String getMessage() {
-        return this.messageDiv.getText().split("\n")[0];
+    public void clickFormAuthentication() {
+        formAuthentication.click();
     }
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("cucumber-glue")
-public class LoginPage {
+public class HerokuappLoginPage {
 
     @FindBy(id="username")
     WebElement usernameInput;
@@ -19,7 +19,7 @@ public class LoginPage {
     @FindBy(className="radius")
     WebElement loginButton;
 
-    public LoginPage(WebDriver driver) {
+    public HerokuappLoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 

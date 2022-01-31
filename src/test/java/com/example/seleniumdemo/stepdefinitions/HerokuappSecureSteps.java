@@ -1,15 +1,15 @@
 package com.example.seleniumdemo.stepdefinitions;
 
-import com.example.seleniumdemo.pages.SecurePage;
+import com.example.seleniumdemo.pages.HerokuappSecurePage;
 import io.cucumber.java.en.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class SecureSteps {
+public class HerokuappSecureSteps {
 
     @Autowired
-    private SecurePage securePage;
+    private HerokuappSecurePage securePage;
 
     @Then("^(?:.*) see(?:s|) the \"(.*)\" message$")
     public void SeeMessage(String message) {
