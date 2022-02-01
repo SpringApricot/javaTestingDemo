@@ -8,6 +8,7 @@
 * [Spring](https://spring.io/)
 * [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 * [AssertJ](https://assertj.github.io/doc/)
+* [TestNG](https://testng.org/doc/)
 
 ## Author
 Joanna Juszczak
